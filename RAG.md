@@ -16,6 +16,18 @@ How it works:
 + When a user asks an LLM a question, the AI model sends the query to another model that converts it into a numeric format so machines can read it.
 + RAG uses this numeric version of the query to retrieve relevant information from external sources and augment the LLM's response with accurate and trustworthy information.
 
+## How to improve responses
+
++ Text splitting chunk size and overlap. The chunk size and overlap can be adjusted to optimize the results.
+  - [Text Splitters](https://js.langchain.com/docs/modules/data_connection/document_transformers/)
++ Embeddings
+  - [Text embedding models](https://js.langchain.com/docs/modules/data_connection/text_embedding/)
+  - Ollama [snowflake-arctic-embed](https://ollama.com/library/snowflake-arctic-embed) is a suite of text embedding models that focuses on creating high-quality retrieval models optimized for performance.
++ Better LLM. Use different LLM models
+  - From Ollama [llama3](https://ollama.com/library/llama3) sizes 8b and 70b.
+  - From Ollama [gemma](https://ollama.com/library/gemma) sizes 7b and 2b.
+  - From Ollama [mixtral](https://ollama.com/library/mixtral) sizes 90b and 26b.
+
 ## Sources
 
 + [Nvidia, What Is Retrieval-Augmented Generation, aka RAG?](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
