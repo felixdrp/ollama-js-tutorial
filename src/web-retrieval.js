@@ -10,14 +10,14 @@ import { TensorFlowEmbeddings } from "langchain/embeddings/tensorflow";
 
 import { RetrievalQAChain } from "langchain/chains";
 
-const url = 'https://en.wikipedia.org/wiki/Capacitive_sensing'
-const query = "Summarize Capacitive sensing."
+const url = 'https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/'
+const query = "Make a list of the key points of RAG"
 
 // Select a model from Ollama
 const ollama = new Ollama({
   baseUrl: "http://localhost:11434",
-  model: "llama3",
-  // model: "llama3:8b-instruct-q8_0",
+  // model: "llama3",
+  model: "llama3:8b-instruct-q8_0",
   // model: "llama2",
   // model: "gemma",
   // model: "dolphincoder",

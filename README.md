@@ -87,4 +87,4 @@ bun src/web-retrieval.js
 
 + [Langchain framework use cases](https://js.langchain.com/docs/use_cases)
 + [Ollama models](https://ollama.com/library)
-+ [RAG](RAG.md)
++ [RAG Retrieval-Augmented Generation](RAG.md) 
