@@ -5,7 +5,7 @@ Retrieval-augmented generation (RAG) is a technique for enhancing the accuracy a
 
 Key points:
 
-+ Enhancing the accuracy and reliability of generative AI models with facts fetched from external sources. Equivalent to have a library at the disposition of the LLM
++ Enhancing the accuracy and reliability of generative AI models with facts fetched from external sources. Equivalent to have a library at the disposition of the LLM.
 + Deeper dive into a current or more specific topic. For example last news or studies.
 + Faster and more economic than LLM model fine-tunning.
 + It allows users to link to private knowledge sources, such as emails, notes, or articles, to improve responses while keeping data secure and private.
@@ -32,3 +32,4 @@ How it works:
 
 + [Nvidia, What Is Retrieval-Augmented Generation, aka RAG?](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
 + [Langchain Retrieval](https://js.langchain.com/docs/modules/data_connection/)
++ [Roie Schwaber-Cohen, Pinecone, Chunking Strategies for LLM Applications](https://www.pinecone.io/learn/chunking-strategies/)
