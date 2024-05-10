@@ -33,3 +33,4 @@ How it works:
 + [Nvidia, What Is Retrieval-Augmented Generation, aka RAG?](https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/)
 + [Langchain Retrieval](https://js.langchain.com/docs/modules/data_connection/)
 + [Roie Schwaber-Cohen, Pinecone, Chunking Strategies for LLM Applications](https://www.pinecone.io/learn/chunking-strategies/)
++ [By Jonathan Larson and Steven Truitt, Microsoft, GraphRAG: Unlocking LLM discovery on narrative private data](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)
