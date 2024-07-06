@@ -34,3 +34,7 @@ How it works:
 + [Langchain Retrieval](https://js.langchain.com/docs/modules/data_connection/)
 + [Roie Schwaber-Cohen, Pinecone, Chunking Strategies for LLM Applications](https://www.pinecone.io/learn/chunking-strategies/)
 + [By Jonathan Larson and Steven Truitt, Microsoft, GraphRAG: Unlocking LLM discovery on narrative private data](https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/)
+
++ [Can long-context language models (LCLMs) subsume retrieval, RAG, SQL, and more?](https://x.com/GoogleDeepMind/status/1804182063425208554?cxt=HBwW1IO6ieOB34kyAAAA&cn=ZmxleGlibGVfcmVjcw%3D%3D&refsrc=email)
+
++ [Prompt Engineering, Graph RAG: Improving RAG with Knowledge Graphs](https://www.youtube.com/watch?v=vX3A96_F3FU)
