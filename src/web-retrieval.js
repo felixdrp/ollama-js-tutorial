@@ -1,12 +1,12 @@
 // *** Using Ollama to Query to a Web site URL
 
-import { Ollama } from "langchain/llms/ollama";
+import { Ollama } from "@langchain/community/llms/ollama";
 import { CheerioWebBaseLoader } from "langchain/document_loaders/web/cheerio";
 
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import "@tensorflow/tfjs-node";
-import { TensorFlowEmbeddings } from "langchain/embeddings/tensorflow";
+import { TensorFlowEmbeddings } from "@langchain/community/embeddings/tensorflow";
 
 import { RetrievalQAChain } from "langchain/chains";
 
