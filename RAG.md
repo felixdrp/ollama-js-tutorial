@@ -5,10 +5,11 @@ Retrieval-augmented generation (RAG) is a technique for enhancing the accuracy a
 
 Key points:
 
-+ Enhancing the accuracy and reliability of generative AI models with facts fetched from external sources. Equivalent to have a library at the disposition of the LLM.
++ Keeping data secure and private. It allows users to link to private knowledge sources, such as emails, notes, or articles, to improve responses.
++ Minimise the probability of LLM hallucinations.
++ Enhancing the accuracy and reliability of generative AI models with facts fetched from external sources, not integrated on the model itself. Equivalent to have a library at the disposition of the LLM.
 + Deeper dive into a current or more specific topic. For example last news or studies.
-+ Faster and more economic than LLM model fine-tunning.
-+ It allows users to link to private knowledge sources, such as emails, notes, or articles, to improve responses while keeping data secure and private.
++ Faster and more economic than LLM model fine-tunning. Train a LLM model on 2024 is expensive.
 
 How it works:
 
