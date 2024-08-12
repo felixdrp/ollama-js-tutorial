@@ -16,11 +16,11 @@ const query = "Make a list of the key points of RAG"
 // Select a model from Ollama
 const ollama = new Ollama({
   baseUrl: "http://localhost:11434",
+  // model: "llama3.1:latest",
   // model: "llama3",
-  model: "llama3:8b-instruct-q8_0",
-  // model: "llama2",
-  // model: "gemma",
-  // model: "dolphincoder",
+  // model: "qwen2:latest",
+  // model: "gemma2:latest",
+  model: "gemma2:2b",
 });
 
 const loader = new CheerioWebBaseLoader(url);
@@ -37,7 +37,7 @@ const textSplitter = new RecursiveCharacterTextSplitter({
     chunkOverlap: 45
 });
 const splitDocs = await textSplitter.splitDocuments(data);
-
+console.log(splitDocs)
 // Then use the TensorFlow Embedding to store these chunks in the datastore
 // const vectorStore = await MemoryVectorStore.fromDocuments(data[0].pageContent, new TensorFlowEmbeddings());
 const vectorStore = await MemoryVectorStore.fromDocuments(splitDocs, new TensorFlowEmbeddings());
@@ -47,3 +47,4 @@ const retriever = vectorStore.asRetriever();
 const chain = RetrievalQAChain.fromLLM(ollama, retriever);
 const result = await chain.call({query: query});
 console.log(result.text)
+console.log(await ollama.call(result.text + ` ASK YOUR QUESTION HERE `))
