@@ -21,6 +21,15 @@ Install options:
 ```bash
 curl -fsSL https://bun.sh/install | bash
 ```
++ Mac using brew
+```bash
+brew install oven-sh/bun/bun # for macOS and Linux
+```
+If you don't have [brew](https://brew.sh/) installed:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 + Windows
 ```
 powershell -c "irm bun.sh/install.ps1 | iex"
