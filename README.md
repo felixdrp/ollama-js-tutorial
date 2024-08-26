@@ -1,9 +1,9 @@
-# langChain-ollama-js-tutorial
-LangChain with Ollama using JavaScript
+# Ollama-js-tutorial
+Ollama using JavaScript
 
 Clone this repo:
 ```bash
-git clone https://github.com/felixdrp/langChain-ollama-js-tutorial.git
+git clone https://github.com/felixdrp/ollama-js-tutorial.git
 
 cd langChain-ollama-js-tutorial
 ```
