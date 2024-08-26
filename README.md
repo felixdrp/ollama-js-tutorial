@@ -40,16 +40,16 @@ General [Ollama docs](https://github.com/ollama/ollama/tree/main/docs).
 
 ### Install a model
 
-Install llama3:
+Install Llama3.1:
 
 ```bash
 # Direct install 
-ollama run llama3
+ollama run llama3.1
 ```
 
 Install on a container:
 ```bash
-docker exec -it ollama ollama run llama3
+docker exec -it ollama ollama run llama3.1
 ```
 
 ### List models
