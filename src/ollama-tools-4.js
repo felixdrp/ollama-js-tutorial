@@ -22,7 +22,6 @@ const messages = [
   {
     role: "user",
     content: exampleQ,
-    // tool_calls: ['cited_answers'] // not yet valid on ollamajs version v0.5.8
   }
 ];
 
