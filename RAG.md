@@ -39,3 +39,5 @@ How it works:
 + [Can long-context language models (LCLMs) subsume retrieval, RAG, SQL, and more?](https://x.com/GoogleDeepMind/status/1804182063425208554?cxt=HBwW1IO6ieOB34kyAAAA&cn=ZmxleGlibGVfcmVjcw%3D%3D&refsrc=email)
 
 + [Prompt Engineering, Graph RAG: Improving RAG with Knowledge Graphs](https://www.youtube.com/watch?v=vX3A96_F3FU)
+
++ [Langchain AI/rag from scratch](https://github.com/langchain-ai/rag-from-scratch)

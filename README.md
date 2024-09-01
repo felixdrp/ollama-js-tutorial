@@ -71,6 +71,7 @@ docker exec -it ollama ollama list
 ```
 
 ## Install Javascript Packages
+After we cloned the repository we need to install the project packages.
 
 ```bash
 bun install
