@@ -64,7 +64,8 @@ async function run(model) {
   })
   // Add the model's response to the conversation history
   messages.push(response.message);
-
+  console.log(JSON.stringify(response, null, 2));
+  
   // Check if the model decided to use the provided function
   if (!response.message.tool_calls || response.message.tool_calls.length === 0) {
     console.log("The model didn't use the function. Its response was:");
