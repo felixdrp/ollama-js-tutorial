@@ -22,11 +22,12 @@ const query = "Make a list of the key points of RAG"
 // Select a model from Ollama
 const llm = new Ollama({
   baseUrl: "http://localhost:11434",
-  // model: "llama3.1:latest",
+  model: "llama3.1:latest",
   // model: "llama3",
   // model: "qwen2:latest",
   // model: "gemma2:latest",
-  model: "gemma2:2b",
+  // model: "gemma2:2b",
+  numCtx: 1000,
 });
 
 const loader = new CheerioWebBaseLoader(url);
@@ -39,8 +40,8 @@ const textSplitter = new CharacterTextSplitter({
     // chunkOverlap: 20
     // Llama3 context = 8K
     // chunkSize: 8100,
-    chunkSize: 2000,
-    chunkOverlap: 45
+    chunkSize: 500,
+    chunkOverlap: 20
 });
 const splitDocs = await textSplitter.splitDocuments(data);
 console.log(splitDocs)
