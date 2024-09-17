@@ -41,3 +41,5 @@ How it works:
 + [Prompt Engineering, Graph RAG: Improving RAG with Knowledge Graphs](https://www.youtube.com/watch?v=vX3A96_F3FU)
 
 + [Langchain AI/rag from scratch](https://github.com/langchain-ai/rag-from-scratch)
+
++ [Pratik Bhavsar, Galileo Labs, Mastering RAG: How to Select A Reranking Model](https://www.rungalileo.io/blog/mastering-rag-how-to-select-a-reranking-model)
