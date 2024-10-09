@@ -93,6 +93,12 @@ Web prompting using on memory RAG ()
 bun src/web-retrieval.js
 ```
 
+Prompting using an image
+```bash
+# Example file needs minicpm-v model.
+bun src/query-image.js media/576px-Pennywell_Farm_is_home_to_some_beautiful_Highland_Cows.jpg
+```
+
 ## About
 
 + [Langchain framework use cases](https://js.langchain.com/docs/use_cases)
