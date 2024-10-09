@@ -22,11 +22,9 @@ const query = "Make a list of the key points of RAG"
 // Select a model from Ollama
 const llm = new Ollama({
   baseUrl: "http://localhost:11434",
-  model: "llama3.1:latest",
-  // model: "llama3",
+  model: "llama3.2:3b",
+  // model: "llama3.1:latest",
   // model: "qwen2:latest",
-  // model: "gemma2:latest",
-  // model: "gemma2:2b",
   numCtx: 1000,
 });
 
