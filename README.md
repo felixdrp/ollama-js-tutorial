@@ -90,6 +90,9 @@ bun src/prompting.js
 Web prompting using on memory RAG ()
 
 ```bash
+# From a file. Example uses llama3.2:3b model
+bun src/text-retrieval.js
+# From a web page.
 bun src/web-retrieval.js
 ```
 
