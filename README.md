@@ -5,7 +5,7 @@ Clone this repo:
 ```bash
 git clone https://github.com/felixdrp/ollama-js-tutorial.git
 
-cd langChain-ollama-js-tutorial
+cd ollama-js-tutorial
 ```
 
 > If git is not installed, then install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
