@@ -105,5 +105,4 @@ async function run(model) {
 
 run(
   'llama3-groq-tool-use'
-  // 'llama3.1'
 ).catch(error => console.error("An error occurred:", error));
