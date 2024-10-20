@@ -6,8 +6,8 @@ const prompt = `why is the sky blue?`;
 // Select a model from Ollama
 const ollama = new Ollama({
   baseUrl: "http://localhost:11434",
-  model: "gemma2:2b",
-  // model: "llama3.1:latest",
+  model: 'llama3.2:3b',
+  // model: 'qwen2.5:1.5b',
 });
 
 const answer = await ollama.invoke(prompt);
