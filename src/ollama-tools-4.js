@@ -5,7 +5,7 @@ import ollama from 'ollama';
 import { z } from 'zod';
 import { zodToJsonSchema } from "zod-to-json-schema";
 
-const model = 'llama3.1'
+const model = 'llama3.2:3b'
 const exampleQ = `What is Brian's height?
 
 Source: 1
