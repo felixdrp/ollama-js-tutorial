@@ -9,8 +9,8 @@ import { CheerioWebBaseLoader } from "@langchain/community/document_loaders/web/
 import { CharacterTextSplitter } from "@langchain/textsplitters";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 // Used to generate embeddings for MemoryVectorStore
-import "@tensorflow/tfjs-node";
-import { TensorFlowEmbeddings } from "@langchain/community/embeddings/tensorflow";
+// https://js.langchain.com/docs/integrations/text_embedding/ollama/
+import { OllamaEmbeddings } from "@langchain/ollama";
 
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 import { createRetrievalChain } from "langchain/chains/retrieval";
@@ -19,13 +19,15 @@ import { ChatPromptTemplate } from "@langchain/core/prompts";
 const url = 'https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generation/'
 const query = "Make a list of the key points of RAG"
 
+const ollamaBaseUrl = "http://localhost:11434"; // Default value
+// const ollamaBaseUrl = "datasky.ddns.net:11434"; // Datasky
+
 // Select a model from Ollama
 const llm = new Ollama({
-  baseUrl: "http://localhost:11434",
+  baseUrl: ollamaBaseUrl,
   model: "llama3.2:3b",
-  // model: "llama3.1:latest",
   // model: "qwen2:latest",
-  numCtx: 1000,
+  // numCtx: 1000,
 });
 
 const loader = new CheerioWebBaseLoader(url);
@@ -45,8 +47,18 @@ const splitDocs = await textSplitter.splitDocuments(data);
 console.log(splitDocs)
 // Then use the TensorFlow Embedding to store these chunks in the datastore
 // const vectorStore = await MemoryVectorStore.fromDocuments(data[0].pageContent, new TensorFlowEmbeddings());
-const vectorStore = await MemoryVectorStore.fromDocuments(splitDocs, new TensorFlowEmbeddings());
+// const vectorStore = await MemoryVectorStore.fromDocuments(splitDocs, new TensorFlowEmbeddings());
 // let a = new TensorFlowEmbeddings()
+
+const vectorStore = await MemoryVectorStore.fromDocuments(splitDocs, new OllamaEmbeddings({
+  // model: "mxbai-embed-large", // Default value
+  // model: "snowflake-arctic-embed",
+  // model: "snowflake-arctic-embed:110m",
+  // model: "snowflake-arctic-embed:22m",
+  model: "nomic-embed-text",
+  baseUrl: ollamaBaseUrl,
+}));
+
 
 const retriever = vectorStore.asRetriever();
 
