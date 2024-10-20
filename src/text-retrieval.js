@@ -14,7 +14,6 @@ const path = './media/herodotus.txt'
 const query = "tell us about Egypt"
 
 const ollamaBaseUrl = "http://localhost:11434"; // Default value
-// const ollamaBaseUrl = "datasky.ddns.net:11434"; // Datasky
 
 // Select a model from Ollama
 const llm = new Ollama({

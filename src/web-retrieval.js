@@ -20,7 +20,6 @@ const url = 'https://blogs.nvidia.com/blog/what-is-retrieval-augmented-generatio
 const query = "Make a list of the key points of RAG"
 
 const ollamaBaseUrl = "http://localhost:11434"; // Default value
-// const ollamaBaseUrl = "datasky.ddns.net:11434"; // Datasky
 
 // Select a model from Ollama
 const llm = new Ollama({
