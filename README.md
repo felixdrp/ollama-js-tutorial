@@ -1,11 +1,26 @@
 # Ollama-js-tutorial
 Ollama using JavaScript
 
+## New install
 Clone this repo:
 ```bash
+# Downlaod the repo.
 git clone https://github.com/felixdrp/ollama-js-tutorial.git
 
+# Go to the new install folder.
 cd ollama-js-tutorial
+```
+
+## Refresh your repo
+```bash
+# Go to your ellama-js-tutorial folder
+cd ollama-js-tutorial
+
+# Get the last version of this repo
+git pull --autostash
+
+# Install the new dependencies:
+bun install
 ```
 
 > If git is not installed, then install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
