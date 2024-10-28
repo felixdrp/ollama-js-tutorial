@@ -1,6 +1,6 @@
 {
   "name": "ollama-js-tutorial",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tutorial using Ollama with JavaScript and LangChain.",
   "main": "src/prompting.js",
   "scripts": {
@@ -11,8 +11,9 @@
     "url": "git+https://github.com/felixdrp/ollama-js-tutorial.git"
   },
   "keywords": [
-    "LangChain",
-    "Ollama"
+    "LLM",
+    "Ollama",
+    "LangChain"
   ],
   "author": "felixdrp",
   "license": "MIT",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/felixdrp/ollama-js-tutorial#readme",
   "dependencies": {
+    "@felixdrp/ollama": "^0.0.1",
     "@langchain/community": "^0.3.7",
     "@langchain/core": "^0.3.13",
     "@langchain/ollama": "^0.1.0",
