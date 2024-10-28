@@ -1,6 +1,6 @@
 {
   "name": "ollama-js-tutorial",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Tutorial using Ollama with JavaScript and LangChain.",
   "main": "src/prompting.js",
   "scripts": {
