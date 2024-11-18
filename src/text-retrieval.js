@@ -11,26 +11,32 @@ import { createRetrievalChain } from "langchain/chains/retrieval";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 
 const path = './media/herodotus.txt'
-const query = "tell us about Egypt"
+const query = "was it easy or hard to survive in Egypt? make a song using the style of the narrator"
 
-const ollamaBaseUrl = "http://localhost:11434"; // Default value
+const ollamaBaseUrl = process.env.OLLAMA_URL || "http://localhost:11434"; // Default value
 
 // Select a model from Ollama
 const llm = new Ollama({
   baseUrl: ollamaBaseUrl,
+  // headers: new Headers({API_KEY: process.env.API_KEY || "guest"}),
+  // headers: {
+  //   API_KEY: process.env.API_KEY || "guest",
+  // },
+  // model: 'granite3-moe',
   model: "llama3.2:1b",
   // model: "llama3.2:3b",
-  // model: "qwen2:latest",
-  numCtx: 1000,
+  //  model: "qwen2:latest",
+  numCtx: 5000,
 });
+llm.client.config.headers = {API_KEY: process.env.API_KEY || "guest"}
 
 const text = await Bun.file(path).text();
 
 const textSplitter = new RecursiveCharacterTextSplitter({
   // Try different sizes of chunk that better suit your model
-  chunkSize: 500,
-  chunkOverlap: 20
-  // chunkSize: 1000,
+  // chunkSize: 500,
+  chunkOverlap: 20,
+  chunkSize: 1000,
   // chunkOverlap: 100
 });
 
@@ -47,6 +53,9 @@ const vectorStore = await MemoryVectorStore.fromDocuments(splitDocs, new OllamaE
   // model: "snowflake-arctic-embed:22m",
   // model: "nomic-embed-text",
   baseUrl: ollamaBaseUrl,
+  headers: {
+    API_KEY: process.env.API_KEY || "guest",
+  },
 }));
 
 const retriever = vectorStore.asRetriever();
