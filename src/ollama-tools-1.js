@@ -1,5 +1,12 @@
 // Utilize a tool specialized model to invoke a function designed to retrieve information about individuals.
-import ollama from 'ollama';
+import { Ollama } from 'ollama'
+
+const ollama = new Ollama({
+  host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
+  headers: {
+    API_KEY: process.env.API_KEY || 'guest',
+  },
+});
 
 const inputText = `Alex is 5 feet tall.
 Claudia is 1 foot taller than Alex and jumps higher than him.
@@ -12,6 +19,9 @@ ${input}
 `;
 
 const response = await ollama.chat({
+  // model: 'granite3-dense',
+  // model: 'granite3-dense:8b',
+  // model: 'granite3-moe',
   model: 'llama3-groq-tool-use',
   // options: {
   //     temperature: 0.1,
