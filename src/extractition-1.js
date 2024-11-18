@@ -1,6 +1,6 @@
 // *** Ollama nuextract model example 1, using nuextract model to extract info from a text.
 // https://ollama.com/library/nuextract
-import { Ollama } from '@felixdrp/ollama'
+import { Ollama } from 'ollama'
 
 const prompt = `### Template:
 {
