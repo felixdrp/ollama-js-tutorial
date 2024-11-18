@@ -1,11 +1,28 @@
 // Utilize a tool specialized model to invoke a function designed to get an answer and citations.
 // https://js.langchain.com/v0.2/docs/how_to/qa_citations/#cite-documents
 
-import ollama from 'ollama';
+import { Ollama } from 'ollama'
 import { z } from 'zod';
 import { zodToJsonSchema } from "zod-to-json-schema";
 
-const model = 'llama3.2:3b'
+const ollama = new Ollama({
+  host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
+  headers: {
+    API_KEY: process.env.API_KEY || 'guest',
+  },
+});
+
+// Models were Right
+// const model = 'llama3.2:3b' // sometimes failed
+// const model = 'qwen2.5' // sometimes failed
+const model = 'qwen2.5:14b'
+// const model = 'qwen2.5:32b'
+// Models were Wrong
+// const model = 'llama3-groq-tool-use'
+// const model = 'granite3-dense:8b'
+// const model = 'granite3-moe'
+// const model = 'nemotron-mini'
+
 const exampleQ = `What is Brian's height?
 
 Source: 1
@@ -59,7 +76,7 @@ const response = await ollama.chat({
   model: model,
   messages: messages,
   options: {
-    temperature: 0,
+    // temperature: 0,
   },
   tools: tools
 })

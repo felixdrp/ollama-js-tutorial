@@ -8,10 +8,15 @@
 
 import { Ollama } from 'ollama'
 
-const PORT = process.env.PORT || 11434;
-// const PORT = process.env.PORT || 8088;
-const ollama = new Ollama({ host: 'http://localhost:' + PORT })
+const ollama = new Ollama({
+  host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
+  headers: {
+    API_KEY: process.env.API_KEY || 'guest',
+  },
+});
 
+const modelToolsTrained = 'llama3-groq-tool-use';
+// const modelToolsTrained = 'granite3-dense:8b';
 
 function getFlightTimes(departure, arrival) {
   const flights = {
@@ -104,5 +109,5 @@ async function run(model) {
 }
 
 run(
-  'llama3-groq-tool-use'
+  modelToolsTrained
 ).catch(error => console.error("An error occurred:", error));

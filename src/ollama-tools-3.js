@@ -1,7 +1,14 @@
 // Utilize a tool specialized model to invoke a function designed to calculate a math formula.
 // https://console.groq.com/docs/tool-use
 
-import ollama from 'ollama';
+import { Ollama } from 'ollama'
+
+const ollama = new Ollama({
+  host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
+  headers: {
+    API_KEY: process.env.API_KEY || 'guest',
+  },
+});
 
 const model = 'llama3-groq-tool-use';
 
