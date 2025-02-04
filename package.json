@@ -23,18 +23,18 @@
   "homepage": "https://github.com/felixdrp/ollama-js-tutorial#readme",
   "dependencies": {
     "@felixdrp/ollama": "^0.0.1",
-    "@langchain/community": "^0.3.15",
-    "@langchain/core": "^0.3.18",
-    "@langchain/ollama": "^0.1.2",
+    "@langchain/community": "^0.3.28",
+    "@langchain/core": "^0.3.37",
+    "@langchain/ollama": "^0.1.5",
     "@langchain/textsplitters": "^0.1.0",
     "@langchain/weaviate": "^0.1.0",
     "cheerio": "^1.0.0",
     "ml-distance": "^4.0.1",
-    "ollama": "^0.5.10",
-    "weaviate-client": "^3.2.3",
+    "ollama": "^0.5.12",
+    "weaviate-client": "^3.3.6",
     "weaviate-ts-client": "^2.2.0",
-    "zod": "^3.23.8",
-    "zod-to-json-schema": "^3.23.5"
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.24.1"
   },
   "packageManager": "yarn@1.22.22"
 }
