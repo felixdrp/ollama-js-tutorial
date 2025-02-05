@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/felixdrp/ollama-js-tutorial#readme",
   "dependencies": {
+    "@langchain/community": "^0.3.28",
     "@langchain/textsplitters": "^0.1.0",
     "cheerio": "^1.0.0",
     "compute-cosine-similarity": "^1.1.0",
