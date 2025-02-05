@@ -28,14 +28,13 @@ const prompt = `### Template:
 ### Text:
 
 The swift golden rabbit leaps over the sluggish cat.
-The meteoric falcon dives beneath the ponderous rhinoceros, just as the fleet-footed cheetah sprints around the lumbering elephant.
+The meteoric falcon dives beneath the ponderous rhinoceros,
+just as the fleet-footed cheetah sprints around the lumbering elephant.
 `;
 
 const ollama = new Ollama({
   host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
-  headers: {
-    API_KEY: process.env.API_KEY || 'guest',
-  },
+  headers: {'Authorization': 'Bearer ' + process.env.OLLAMA_API_KEY,}
 });
 
 const response = await ollama.generate({
