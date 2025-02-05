@@ -67,17 +67,19 @@ const promptEmbedding =  await ollama.embed({
   input: query,
 })
 
-for await (const doc of splitDocs) {
-  const embedding = await ollama.embed({
-    ...modelEmbedding,
-    input: doc.pageContent,
-  })
-  doc.embedding = embedding.embeddings[0]
+// Send all the texts for embeddings at once
+const embeddings = await ollama.embed({
+  ...modelEmbedding,
+  input: splitDocs.map(doc => doc.pageContent)
+})
+
+splitDocs.forEach((doc, index) => {
+  doc.embedding = embeddings.embeddings[index]
   // similarity with similarity
   // doc.similarity = similarity(promptEmbedding.embeddings[0], doc.embedding)
   // similarity with ml-distance cosine
   doc.similarity = mlDistance.similarity.cosine(promptEmbedding.embeddings[0], doc.embedding)
-}
+})
 console.timeEnd('embedding')
 
 // Sort by similarity
@@ -96,6 +98,8 @@ splitDocs = splitDocs.sort((a, b) => {
 const context = splitDocs.slice(0, 5)
   .map((doc, index) => `Doc${index}: ${doc.pageContent}`)
   .join(' ')
+
+// console.log(context)
 
 // Using generate
 const answer = await ollama.generate({
