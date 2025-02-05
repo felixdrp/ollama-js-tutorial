@@ -2,17 +2,18 @@
 // * Use it for a more dynamic UI experience
 
 const {readable, writable} = new TransformStream();
-
 const controller = new AbortController();
+const ollamaBaseUrl = process.env.OLLAMA_URL || "http://localhost:11434"; // Default value
 
-const stream = await fetch("http://localhost:11434/api/generate", {
+const stream = await fetch(ollamaBaseUrl + "/api/generate", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+    'Authorization': 'Bearer ' + process.env.OLLAMA_API_KEY,
   },
   body: JSON.stringify({
-    prompt: "Count from 0 to 10",
-    model: "codegemma:instruct",
+    prompt: "Count from 0 to 10. Use only numbers and commas.",
+    model: "phi3.5",
     stream: true,
   }),
   signal: controller.signal,
