@@ -3,9 +3,7 @@ import { Ollama } from 'ollama'
 
 const ollama = new Ollama({
   host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
-  headers: {
-    API_KEY: process.env.API_KEY || 'guest',
-  },
+  headers: {'Authorization': 'Bearer ' + process.env.OLLAMA_API_KEY,}
 });
 
 const inputText = `Alex is 5 feet tall.

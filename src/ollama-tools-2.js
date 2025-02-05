@@ -10,13 +10,11 @@ import { Ollama } from 'ollama'
 
 const ollama = new Ollama({
   host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
-  headers: {
-    API_KEY: process.env.API_KEY || 'guest',
-  },
+  headers: {'Authorization': 'Bearer ' + process.env.OLLAMA_API_KEY,}
 });
 
-const modelToolsTrained = 'llama3-groq-tool-use';
-// const modelToolsTrained = 'granite3-dense:8b';
+// const modelToolsTrained = 'llama3-groq-tool-use';
+const modelToolsTrained = 'granite3-dense:8b';
 
 function getFlightTimes(departure, arrival) {
   const flights = {

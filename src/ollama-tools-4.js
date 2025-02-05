@@ -7,15 +7,14 @@ import { zodToJsonSchema } from "zod-to-json-schema";
 
 const ollama = new Ollama({
   host: process.env.OLLAMA_URL || "http://localhost:11434", // Default value
-  headers: {
-    API_KEY: process.env.API_KEY || 'guest',
-  },
+  headers: {'Authorization': 'Bearer ' + process.env.OLLAMA_API_KEY,}
 });
 
 // Models were Right
+// const model = 'command-r7b' // sometimes failed
 // const model = 'llama3.2:3b' // sometimes failed
 // const model = 'qwen2.5' // sometimes failed
-const model = 'qwen2.5:14b'
+const model = 'qwen2.5-coder:14b'
 // const model = 'qwen2.5:32b'
 // Models were Wrong
 // const model = 'llama3-groq-tool-use'
