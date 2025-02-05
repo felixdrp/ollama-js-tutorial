@@ -1,5 +1,10 @@
-// Use a model in the rol of an Spanish grammar expert
-import ollama from 'ollama';
+// Use a model in the rol of a Spanish grammar expert
+import { Ollama } from "ollama";
+
+const ollama = new Ollama({
+  host: process.env.OLLAMA_URL || "http://localhost:11434",
+  headers: { 'Authorization': 'Bearer ' + process.env.OLLAMA_API_KEY, }
+});
 
 const inputText = `Comer me gustaria un paella.`;
 
@@ -15,5 +20,6 @@ const response = await ollama.chat({
     messages: [{role: 'user', content:prompt}]
 })
 
-console.log(JSON.stringify(response, null, 2));
+// console.log(JSON.stringify(response, null, 2));
+console.log(response);
   
