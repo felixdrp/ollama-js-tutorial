@@ -17,9 +17,10 @@ ${input}
 `;
 
 const response = await ollama.chat({
-  // model: 'granite3-dense',
-  // model: 'granite3-dense:8b',
-  // model: 'granite3-moe',
+  // model: 'granite3.1-dense',
+  // model: 'granite3.1-dense:8b',
+  // model: 'granite3.1-moe',
+  // model: 'mistral-small3.1',
   model: 'llama3-groq-tool-use',
   // options: {
   //     temperature: 0.1,

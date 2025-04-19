@@ -14,7 +14,7 @@ const ollama = new Ollama({
 });
 
 // const modelToolsTrained = 'llama3-groq-tool-use';
-const modelToolsTrained = 'granite3-dense:8b';
+const modelToolsTrained = 'granite3.3:latest';
 
 function getFlightTimes(departure, arrival) {
   const flights = {

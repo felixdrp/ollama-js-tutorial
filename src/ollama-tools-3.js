@@ -8,8 +8,8 @@ const ollama = new Ollama({
   headers: {'Authorization': 'Bearer ' + process.env.OLLAMA_API_KEY,}
 });
 
-const model = 'granite3-dense:8b';
-// const model = 'llama3-groq-tool-use';
+// const model = 'granite3.3';
+const model = 'llama3-groq-tool-use';
 
 const userPrompt = "What is 25 * 4 + 10?";
 

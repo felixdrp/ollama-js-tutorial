@@ -18,8 +18,8 @@ const model = 'qwen2.5-coder:14b'
 // const model = 'qwen2.5:32b'
 // Models were Wrong
 // const model = 'llama3-groq-tool-use'
-// const model = 'granite3-dense:8b'
-// const model = 'granite3-moe'
+// const model = 'granite3.1-dense:8b'
+// const model = 'granite3.1-moe'
 // const model = 'nemotron-mini'
 
 const exampleQ = `What is Brian's height?
