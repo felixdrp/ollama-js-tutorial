@@ -11,15 +11,14 @@ const ollama = new Ollama({
 });
 
 // Models were Right
-// const model = 'command-r7b' // sometimes failed
 // const model = 'llama3.2:3b' // sometimes failed
 // const model = 'qwen2.5' // sometimes failed
-const model = 'qwen2.5-coder:14b'
-// const model = 'qwen2.5:32b'
+// const model = 'qwen2.5-coder:14b'
+const model = 'qwen3:latest'
 // Models were Wrong
 // const model = 'llama3-groq-tool-use'
+// const model = 'granite3.3'
 // const model = 'granite3.1-dense:8b'
-// const model = 'granite3.1-moe'
 // const model = 'nemotron-mini'
 
 const exampleQ = `What is Brian's height?
